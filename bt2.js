@@ -4,7 +4,7 @@ let jobs = [
   { job: "Playing", duration: 6 },
   { job: "Relaxing", duration: 1 },
   { job: "Reading", duration: 2 }
-]
+];
 let readingJob = function(jobs, index = 0, durationStart = 1) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
