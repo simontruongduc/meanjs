@@ -15,7 +15,6 @@ const pingService = {
                 server = servers[index];
             }
             axios.get(`${server.url}/ping`).then(function (response) {
-                console.log(`server ${server.name} is alive`);
                 self.ping(ignoreServer,index < servers.length - 1 ? index+1 : 0);
             }).catch(function (error) {
                 console.log(`server ${server.name} die`);
