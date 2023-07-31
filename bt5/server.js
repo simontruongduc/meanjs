@@ -3,6 +3,7 @@ var app = express();
 app.set("view engine","ejs");
 app.set("views","./views");
 app.use(express.static(__dirname + "/public"));
+app.use('/detail', express.static(__dirname + "/public"));
 app.listen(7000);
 
 let products = [
@@ -40,7 +41,7 @@ app.get('/',function (req, res){
    res.render('index',{page:'product_list',data:products})
 });
 
-app.get('/:id',function (req, res){
+app.get('/detail/:id',function (req, res){
     var product =  {};
     new Promise(function (resolve, reject){
         product = getProductById(req.params.id);
