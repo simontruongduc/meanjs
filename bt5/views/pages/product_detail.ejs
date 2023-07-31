@@ -1,0 +1,29 @@
+<h1> This is product detail page</h1>
+<div class="container m-auto">
+    <div class="m-4 mainWindow shadow bg-white-rounded p-1">
+
+        <!-- Window 1-->
+        <div class="d-flex flex-row flex-no-wrap bg-1">
+            <!-- Product Image Section-->
+            <div class="flex-grow-1 m-2">
+                <img class="product-img p-2" src="<%- data.image %>">
+            </div>
+            <!-- Product Image Section-->
+
+            <!-- Product Desc Section-->
+            <div class="flex-grow-1 m-2 p-1">
+                <div class="d-flex flex-column">
+                    <div class="desc p-1 d-flex justify-content-between">
+                        <h4> <%- data.name %></h4>
+                    </div>
+                    <h4> Price : <%- data.price %></h4>
+                    <div>
+                        <%- data.description%>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Image Section-->
+        </div>
+
+    </div>
+</div>
